@@ -1,0 +1,158 @@
+/* ===========================
+   RIBBON
+=========================== */
+
+.ribbon-wrap{
+    position:relative;
+    height:120px;
+    margin-top:-80px;
+    z-index:5;
+}
+
+.ribbon{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        100deg,
+        var(--gold-soft) 0%,
+        var(--gold) 45%,
+        #B8912B 100%
+    );
+
+    clip-path:polygon(
+        0 30%,
+        100% 0,
+        100% 70%,
+        0 100%
+    );
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 40px -15px rgba(212,175,55,.45);
+}
+
+.ribbon-track{
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+    white-space:nowrap;
+
+    padding-left:6%;
+
+    color:var(--aubergine-deep);
+
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.2rem;
+}
+
+.ribbon-track span::after{
+    content:"✦";
+    margin-left:60px;
+    opacity:.6;
+    font-style:normal;
+}
+
+
+/* ===========================
+   FLOATING BOOKING CARD
+=========================== */
+
+.booking-float{
+    max-width:1180px;
+    margin:-35px auto 80px;
+    padding:0 6%;
+    position:relative;
+    z-index:20;
+}
+
+.booking-card{
+    background:white;
+
+    border-radius:30px;
+
+    display:grid;
+    grid-template-columns:
+        repeat(4,1fr)
+        auto;
+
+    gap:30px;
+
+    align-items:end;
+
+    padding:34px 40px;
+
+    box-shadow:
+        0 25px 60px rgba(53,15,83,.14);
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field label{
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:#7b3ff3;
+    font-size:.82rem;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.field select,
+.field input{
+    border:none;
+    border-bottom:3px solid #eadcf7;
+
+    padding:12px 0;
+
+    background:transparent;
+
+    font-size:1.15rem;
+
+    color:#2f2640;
+
+    outline:none;
+}
+
+.field select:focus,
+.field input:focus{
+    border-color:#9c4dff;
+}
+
+.booking-card .btn-primary{
+    height:72px;
+    padding:0 40px;
+    white-space:nowrap;
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:900px){
+
+    .booking-card{
+        grid-template-columns:1fr;
+    }
+
+    .booking-card .btn-primary{
+        width:100%;
+    }
+
+    .ribbon-track{
+        font-size:1rem;
+        gap:40px;
+    }
+
+    .ribbon-track span::after{
+        margin-left:40px;
+    }
+}

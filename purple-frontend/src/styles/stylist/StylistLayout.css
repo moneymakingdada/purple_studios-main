@@ -1,0 +1,7 @@
+.portal-subnav{ background: var(--aubergine-deep); padding: 0 6%; }
+.portal-subnav-inner{ display: flex; gap: 4px; padding: 0; }
+.portal-tab{
+  padding: 16px 22px; font-size: 0.88rem; font-weight: 700;
+  color: #B79FCB; border-bottom: 2px solid transparent;
+}
+.portal-tab.active{ color: var(--gold-soft); border-bottom-color: var(--gold); }

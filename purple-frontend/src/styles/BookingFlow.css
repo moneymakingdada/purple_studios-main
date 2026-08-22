@@ -1,0 +1,53 @@
+.booking-flow-wrap{ padding-bottom: 100px; max-width: 720px; }
+.booking-flow-card{ padding: 40px; }
+@media(max-width:600px){ .booking-flow-card{ padding: 26px 20px; } }
+.booking-flow-card h2{ font-size: 1.4rem; margin-bottom: 24px; }
+
+.option-tile{
+  border-radius: 14px; padding: 16px; cursor: pointer;
+  border: 2px solid #E4D5F2; background: transparent;
+}
+.option-tile.selected{ border-color: var(--orchid); background: rgba(178,75,243,0.06); }
+.option-tile h4{ font-size: 0.95rem; }
+.option-tile p{ color: var(--muted); font-size: 0.78rem; margin-top: 4px; }
+.option-tile .price{ font-weight: 800; color: var(--violet); margin-top: 8px; }
+
+.stylist-tile{ text-align: center; }
+.stylist-tile-avatar{
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--lavender); margin: 0 auto 10px; overflow: hidden;
+}
+.stylist-tile h4{ font-size: 0.85rem; }
+.stylist-tile p{ font-size: 0.72rem; color: var(--muted); }
+
+.slots-label{
+  display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--violet); margin-bottom: 10px;
+}
+.slots-wrap{ display: flex; flex-wrap: wrap; gap: 10px; }
+.slot-tile{
+  border: 2px solid #E4D5F2; border-radius: 12px; padding: 10px 16px;
+  font-weight: 600; font-size: 0.88rem; cursor: pointer; color: var(--ink);
+}
+.slot-tile.selected{ border-color: var(--orchid); color: var(--violet); background: rgba(178,75,243,0.08); }
+
+.summary-row{
+  display: flex; justify-content: space-between; padding: 14px 0;
+  border-bottom: 1px solid #EFE4F7; font-size: 0.92rem;
+}
+.summary-row span:first-child{ color: var(--muted); }
+.summary-row span:last-child{ font-weight: 700; }
+.summary-total{
+  display: flex; justify-content: space-between;
+  padding-top: 20px; margin-top: 6px; font-size: 1.05rem;
+}
+
+.booking-flow-actions{ display: flex; justify-content: space-between; margin-top: 36px; }
+
+.success-card{ padding: 50px; text-align: center; }
+.success-icon{
+  width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 22px;
+  background: linear-gradient(120deg,var(--orchid),var(--violet));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.8rem;
+}

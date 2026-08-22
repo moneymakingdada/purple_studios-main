@@ -1,0 +1,28 @@
+.service-detail-hero{
+  background: linear-gradient(180deg, var(--aubergine-deep), var(--aubergine));
+  padding: 50px 6% 0;
+  position: relative;
+  overflow: hidden;
+}
+.service-detail-crumb{ color: #B79FCB; font-size: 0.85rem; display: block; margin-bottom: 24px; }
+.service-detail-hero h1{ color: var(--ivory); font-size: clamp(2rem,3.6vw,2.8rem); margin: 14px 0 16px; }
+.service-detail-hero p{ color: #D9C7EA; max-width: 440px; margin-bottom: 24px; }
+.service-detail-hero-image{ border-radius: 20px 20px 0 0; overflow: hidden; aspect-ratio: 16/10; }
+
+.service-detail-pricebar{
+  margin-top: -40px;
+  position: relative;
+  z-index: 5;
+}
+.service-detail-pricebar .card{
+  padding: 28px 34px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.price-item h4{ font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--violet); margin-bottom: 6px; }
+.price-item p{ font-family: 'Fraunces',serif; font-size: 1.3rem; color: var(--aubergine-deep); text-transform: capitalize; }
+.service-detail-pricebar .btn-primary{ margin-left: auto; }
+
+.service-detail-gallery-item{ border-radius: 16px; overflow: hidden; aspect-ratio: 1; }

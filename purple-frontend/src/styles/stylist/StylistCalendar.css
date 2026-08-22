@@ -1,0 +1,26 @@
+.calendar-head{
+  display: flex; justify-content: space-between; align-items: flex-end;
+  max-width: none; flex-wrap: wrap; gap: 12px;
+}
+.calendar-nav{ display: flex; gap: 10px; }
+
+.calendar-day-header{
+  text-align: center; margin-bottom: 10px; padding: 6px 0; border-radius: 10px;
+  color: var(--ink);
+}
+.calendar-day-header.today{
+  background: linear-gradient(120deg,var(--orchid),var(--violet));
+  color: #fff;
+}
+.calendar-day-header .dow{ font-size: 0.68rem; text-transform: uppercase; font-weight: 700; opacity: 0.8; }
+.calendar-day-header .dnum{ font-family: 'Fraunces',serif; font-size: 1.1rem; }
+
+.calendar-day-col{ min-height: 160px; display: flex; flex-direction: column; gap: 8px; }
+.calendar-empty{ font-size: 0.72rem; color: var(--muted); text-align: center; }
+
+.calendar-booking{ padding: 10px; }
+.calendar-booking .time{ font-size: 0.72rem; font-weight: 700; }
+.calendar-booking .service{ font-size: 0.76rem; margin-top: 2px; }
+.calendar-booking .customer{ font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+.calendar-booking-actions{ display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.calendar-booking-actions button{ padding: 4px 8px; font-size: 0.65rem; }

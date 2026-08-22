@@ -1,0 +1,19 @@
+.stylist-profile-crumb{ color: var(--muted); font-size: 0.85rem; }
+.stylist-profile-avatar{
+  width: 100%; aspect-ratio: 4/5; border-radius: 20px;
+  overflow: hidden; background: var(--lavender);
+}
+.stylist-profile-info h1{ margin: 12px 0 6px; font-size: 2rem; color: var(--aubergine-deep); }
+.stylist-profile-info .meta{ color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+.stylist-profile-info .bio{ color: #5c4a68; max-width: 520px; margin-bottom: 24px; }
+.stylist-profile-tags{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+.stylist-profile-tags .pill{ background: var(--lavender); color: var(--violet); border: 1px solid #E4D5F2; }
+
+.stylist-profile-portfolio{ margin-top: 60px; }
+.stylist-profile-portfolio h3{ font-size: 1.2rem; color: var(--aubergine-deep); margin-bottom: 18px; }
+.stylist-profile-portfolio-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.stylist-profile-portfolio-item{ aspect-ratio: 1; border-radius: 14px; overflow: hidden; }

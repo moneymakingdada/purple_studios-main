@@ -1,0 +1,13 @@
+.stylists-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+.stylist-card{ padding: 24px; display: block; }
+.stylist-card-avatar{
+  width: 64px; height: 64px; border-radius: 50%;
+  overflow: hidden; background: var(--lavender); margin-bottom: 14px;
+}
+.stylist-card h4{ font-size: 1.05rem; }
+.stylist-card p{ color: var(--muted); font-size: 0.85rem; margin: 4px 0 10px; }
+.stylist-card-meta{ display: flex; gap: 14px; font-size: 0.8rem; color: var(--violet); font-weight: 700; }

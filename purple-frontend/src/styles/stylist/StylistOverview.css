@@ -1,0 +1,20 @@
+.stylist-overview-hero{
+  background: radial-gradient(120% 120% at 20% 0%, #3a1157 0%, var(--aubergine) 45%, var(--aubergine-deep) 100%);
+  padding: 50px 6% 60px;
+}
+.stylist-overview-hero .eyebrow{ color: var(--gold-soft); }
+.stylist-overview-hero h1{ color: var(--ivory); font-size: clamp(1.8rem,3vw,2.4rem); margin: 12px 0 6px; }
+.stylist-overview-hero p{ color: #D9C7EA; }
+
+.stat-card{ padding: 22px; }
+.stat-card-label{ font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--violet); margin-bottom: 8px; }
+.stat-card-value{ font-family: 'Fraunces',serif; font-size: 1.8rem; color: var(--aubergine-deep); }
+.stat-card-sub{ color: var(--muted); font-size: 0.8rem; }
+
+.today-row{
+  padding: 20px; display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.today-row h4{ font-size: 0.98rem; }
+.today-row p{ color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
+.today-row-actions{ display: flex; align-items: center; gap: 10px; }

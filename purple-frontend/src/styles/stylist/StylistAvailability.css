@@ -1,0 +1,20 @@
+.availability-day-row{
+  padding: 18px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.availability-day-label{ width: 100px; font-weight: 700; font-size: 0.88rem; }
+.availability-windows{ display: flex; gap: 10px; flex-wrap: wrap; flex: 1; }
+.availability-empty{ color: var(--muted); font-size: 0.82rem; }
+.availability-window-pill{
+  background: var(--lavender); color: var(--violet); border: 1px solid #E4D5F2;
+  display: flex; align-items: center; gap: 8px;
+}
+.availability-window-remove{
+  background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.9rem;
+}
+
+.availability-form{ padding: 20px; display: flex; gap: 14px; align-items: end; flex-wrap: wrap; }
+.availability-form .field{ margin-bottom: 0; }
+
+.timeoff-row{ padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+.timeoff-date{ font-weight: 700; font-size: 0.9rem; }
+.timeoff-reason{ color: var(--muted); font-size: 0.82rem; margin-left: 12px; }
