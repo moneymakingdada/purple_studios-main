@@ -1,4 +1,5 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin
 
 from .models import Availability, PortfolioImage, StylistProfile, TimeOff
 
@@ -19,7 +20,7 @@ class PortfolioInline(admin.TabularInline):
 
 
 @admin.register(StylistProfile)
-class StylistProfileAdmin(admin.ModelAdmin):
+class StylistProfileAdmin(ModelAdmin):
     list_display = ("user", "title", "salon", "years_experience", "is_accepting_bookings", "average_rating")
     list_filter = ("salon", "is_accepting_bookings")
     search_fields = ("user__first_name", "user__last_name", "user__email", "title")

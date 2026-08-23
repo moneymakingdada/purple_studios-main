@@ -1,4 +1,5 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin
 
 from .models import Booking, Review
 
@@ -9,7 +10,7 @@ class ReviewInline(admin.StackedInline):
 
 
 @admin.register(Booking)
-class BookingAdmin(admin.ModelAdmin):
+class BookingAdmin(ModelAdmin):
     list_display = ("id", "customer", "stylist", "service", "salon", "date", "start_time", "status", "price")
     list_filter = ("status", "salon", "date")
     search_fields = ("customer__email", "customer__first_name", "customer__last_name", "stylist__user__email")
@@ -31,6 +32,6 @@ class BookingAdmin(admin.ModelAdmin):
 
 
 @admin.register(Review)
-class ReviewAdmin(admin.ModelAdmin):
+class ReviewAdmin(ModelAdmin):
     list_display = ("booking", "rating", "created_at")
     list_filter = ("rating",)
