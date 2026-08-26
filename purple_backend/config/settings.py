@@ -29,7 +29,16 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 
 INSTALLED_APPS = [
-    "unfold",
+     # dashboard must precede unfold/admin so our admin/index.html override is
+        # discovered first; it then {% extends "admin/index.html" %} to chain
+        # into unfold's own (which itself extends Django's), rather than
+        # duplicating unfold's markup.
+    "dashboard",
+    
+    "unfold",  # must precede django.contrib.admin
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
     "colorfield",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -84,6 +93,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "config.wsgi.application"
+
 
 
 
@@ -186,3 +196,37 @@ SMS_PROVIDER = os.environ.get("SMS_PROVIDER", "arkesel")
 ARKESEL_API_KEY = os.environ.get("ARKESEL_API_KEY", "")
 ARKESEL_SENDER_ID = os.environ.get("ARKESEL_SENDER_ID", "Purple")
 SMS_ENABLED = os.environ.get("SMS_ENABLED", "True") == "True"
+
+# --- Django Unfold (admin theme) ---
+# COLORS uses a violet OKLCH scale matching Purple's brand accent; gold is
+# introduced separately, inside our own dashboard template content, as the
+# secondary restrained accent — not as a global admin color, to keep this a
+# single deliberate accent rather than two competing brand colors everywhere.
+UNFOLD = {
+    "SITE_TITLE": "Purple Admin",
+    "SITE_HEADER": "Purple Admin",
+    "SITE_SYMBOL": "storefront",
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": True,
+    "ENVIRONMENT": "dashboard.utils.environment_callback",
+    "DASHBOARD_CALLBACK": "dashboard.utils.dashboard_callback",
+    "COLORS": {
+        "primary": {
+            "50": "oklch(97.7% 0.014 308.299)",
+            "100": "oklch(94.6% 0.033 307.174)",
+            "200": "oklch(90.2% 0.060 306.703)",
+            "300": "oklch(82.7% 0.108 306.383)",
+            "400": "oklch(72.2% 0.177 305.504)",
+            "500": "oklch(62.7% 0.233 303.900)",
+            "600": "oklch(55.8% 0.252 302.321)",
+            "700": "oklch(49.6% 0.237 301.924)",
+            "800": "oklch(43.8% 0.198 303.724)",
+            "900": "oklch(38.1% 0.166 304.987)",
+            "950": "oklch(29.1% 0.143 302.717)",
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+    },
+}
