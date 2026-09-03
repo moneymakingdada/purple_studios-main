@@ -54,9 +54,18 @@ export default function Landing() {
               <Link to="/services" className="btn-ghost on-dark">Explore services</Link>
             </div>
           </div>
-          <div className="landing-hero-image">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=900&auto=format&fit=crop" alt="Purple salon interior" />
-          </div>
+          <div className="dashboard-hero-image">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="/purple-hero-poster.jpg"
+  >
+    <source src="/purple-hero.webm" type="video/webm" />
+    <source src="/purple-hero.mp4" type="video/mp4" />
+  </video>
+</div>
         </div>
       </section>
 

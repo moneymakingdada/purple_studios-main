@@ -21,7 +21,7 @@ body{
 }
 h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
 a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;height:100%;object-fit:cover;}
+img, video{display:block;width:100%;height:100%;object-fit:cover;}
 button{font-family:inherit;}
 .eyebrow{text-transform:uppercase;letter-spacing:0.18em;font-size:0.72rem;font-weight:700;color:var(--gold);}
 

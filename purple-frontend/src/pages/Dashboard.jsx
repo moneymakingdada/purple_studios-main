@@ -59,11 +59,17 @@ export default function Dashboard() {
             </Link>
           </div>
           <div className="dashboard-hero-image">
-            <img
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
-              alt="Purple studio"
-            />
-          </div>
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    poster="/purple-hero-poster.jpg"
+  >
+    <source src="/purple-hero.webm" type="video/webm" />
+    <source src="/purple-hero.mp4" type="video/mp4" />
+  </video>
+</div>
         </div>
       </section>
 
