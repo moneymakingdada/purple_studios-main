@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     "stylists",
     "bookings",
     "notifications",
+    "assistant",
 ]
 
 MIDDLEWARE = [
@@ -196,6 +197,15 @@ SMS_PROVIDER = os.environ.get("SMS_PROVIDER", "arkesel")
 ARKESEL_API_KEY = os.environ.get("ARKESEL_API_KEY", "")
 ARKESEL_SENDER_ID = os.environ.get("ARKESEL_SENDER_ID", "Purple")
 SMS_ENABLED = os.environ.get("SMS_ENABLED", "True") == "True"
+
+# --- WhatsApp bot (assistant app) ---
+WHATSAPP_VERIFY_TOKEN = os.environ.get("WHATSAPP_VERIFY_TOKEN", "")
+WHATSAPP_ACCESS_TOKEN = os.environ.get("WHATSAPP_ACCESS_TOKEN", "")
+WHATSAPP_PHONE_NUMBER_ID = os.environ.get("WHATSAPP_PHONE_NUMBER_ID", "")
+
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
+
 
 # --- Django Unfold (admin theme) ---
 # COLORS uses a violet OKLCH scale matching Purple's brand accent; gold is
