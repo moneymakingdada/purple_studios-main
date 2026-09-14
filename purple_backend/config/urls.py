@@ -21,6 +21,7 @@ def index(request):
             "services": request.build_absolute_uri("/api/services/"),
             "stylists": request.build_absolute_uri("/api/stylists/"),
             "bookings": request.build_absolute_uri("/api/bookings/"),
+            "assistant": request.build_absolute_uri("/api/assistant/"),
         },
     })
 
@@ -33,6 +34,7 @@ urlpatterns = [
     path("api/services/", include("services.urls")),
     path("api/stylists/", include("stylists.urls")),
     path("api/bookings/", include("bookings.urls")),
+    path("api/assistant/", include("assistant.urls")),
 ]
 
 if not os.environ.get("CLOUDINARY_URL"):
